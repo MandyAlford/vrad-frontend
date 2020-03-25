@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+main {
+    background-color: blue;
+}
+
+img {
+  height:50px;
+}
+
+button {
+  width: 50px;
+}
+
+.login-header {
+  align-items: center;
+  color: white;
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+}
