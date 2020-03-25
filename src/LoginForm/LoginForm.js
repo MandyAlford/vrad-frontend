@@ -8,7 +8,7 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <div className='login-form'>
+      <form className='login-form'>
         <input type='text' id='name-input' placeholder='NAME'/>
         <input type='text' id='email-input' placeholder='EMAIL'/>
         <input list='travel-types' name='travel-type'placeholder='TYPE OF TRAVEL'/>
@@ -18,7 +18,7 @@ class LoginForm extends Component {
           <option value='Other'/>
         </datalist>
         <button id='submit-button'>SUBMIT</button>
-      </div>
+      </form>
     )
   }
 }
