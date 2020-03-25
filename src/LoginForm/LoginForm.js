@@ -11,9 +11,8 @@ class LoginForm extends Component {
       <div className='login-form'>
         <input type='text' id='name-input' placeholder='NAME'/>
         <input type='text' id='email-input' placeholder='EMAIL'/>
-        <input list='travel-types' name='travel-type'/>
+        <input list='travel-types' name='travel-type'placeholder='TYPE OF TRAVEL'/>
         <datalist id='travel-types'>
-          <option value='' disabled selected>=Type of Travel</option>
           <option value='Business'/>
           <option value='Vacation'/>
           <option value='Other'/>
