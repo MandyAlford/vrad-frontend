@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom';
 import './App.css';
 import map from '../assets/map.png';
-import LoginContainer from '../LoginContainer/LoginContainer';
+import LoginForm from '../LoginForm/LoginForm';
 import Areas from '../Areas/Areas';
 
 class App extends Component {
@@ -16,8 +17,9 @@ class App extends Component {
               <img src= {map} />
               <h1>VRAD</h1>
           </header>
-          <LoginContainer />
+          <Route path='/' exact component={ LoginForm } />
         </div>
+        <Route path='/areas' exact component={ Areas } />
       </main>
     )
   }

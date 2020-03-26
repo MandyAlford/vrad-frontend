@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './LoginForm.css';
+import Areas from '../Areas/Areas';
 
 class LoginForm extends Component {
   constructor() {
