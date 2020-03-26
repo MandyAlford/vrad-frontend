@@ -9,9 +9,8 @@ main {
 .login-screen {
   width: 100vw;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
-
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 img {
@@ -22,7 +21,7 @@ img {
   align-items: center;
   color: white;
   display: flex;
-  width: 100vw;
+  width: 100%;
   padding-left: 4%;
   position: fixed;
 }

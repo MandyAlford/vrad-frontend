@@ -2,9 +2,9 @@
 .login-form {
   display: flex;
   flex-flow: column nowrap;
-  margin: 5% 40% 5% 40%;
   align-items: center;
   width: 400px;
+  margin: auto;
 }
 
 input,
