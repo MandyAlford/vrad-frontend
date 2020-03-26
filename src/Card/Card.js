@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 const Card = (props) => {
   return (
-    <p>I am a {card}</p>
+    <div>
+      <h2>{props.shortName}</h2>
+      <h1>{props.longName}</h1>
+      <p>{props.description}</p>
+    </div>
   )
 }
 
