@@ -23,7 +23,7 @@ class LoginForm extends Component {
     event.preventDefault();
     if (this.state.name === '' || this.state.email === '' || this.state.type === '') {
       event.preventDefault();
-      console.log("ERROR MESSAGE!")
+      document.querySelector('.error').classList.remove('hidden');
     } else {
       this.props.history.push('/areas')
     }
@@ -37,6 +37,7 @@ class LoginForm extends Component {
             <h1>VRAD</h1>
         </header>
         <form className='login-form' onSubmit={this.handleSubmit}>
+          <p class="error hidden">Please complete all required fields!</p>
           <input type='text' id='name' placeholder='NAME' onChange={this.handleChange}/>
           <input type='text' id='email' placeholder='EMAIL'onChange={this.handleChange}/>
           <select id='type' onChange={this.handleChange}>

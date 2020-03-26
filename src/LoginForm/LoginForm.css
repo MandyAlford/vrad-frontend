@@ -75,3 +75,17 @@ button:hover {
   background: rgba(228, 74, 26);
   border: 2px solid rgba(255, 255, 255);
 }
+
+.error {
+  color: white;
+  width: 70%;
+  padding: 2%;
+  background: rgba(228, 74, 26, 0.9);
+  border-radius: 15px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
