@@ -10,7 +10,7 @@
 input,
 select {
 background: rgba(28, 26, 26, 0.9);
-border: 1px solid rgba(255, 255, 255, 0.5);
+border: 2px solid rgba(255, 255, 255, 0.5);
 box-sizing: border-box;
 border-radius: 15px;
 margin-bottom: 5%;
@@ -18,6 +18,11 @@ padding: 2% 3%;
 width: 75%;
 color: white !important;
 font-size: 1.2em !important;
+}
+
+input:hover,
+select:hover {
+  border: 2px solid rgba(255, 255, 255);
 }
 
 ::placeholder {
@@ -44,4 +49,5 @@ button {
 
 button:hover {
   background: rgba(228, 74, 26);
+  border: 2px solid rgba(255, 255, 255);
 }
