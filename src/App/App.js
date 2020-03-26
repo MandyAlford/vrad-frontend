@@ -17,7 +17,6 @@ class App extends Component {
               <h1>VRAD</h1>
           </header>
           <LoginContainer />
-          <Areas />
         </div>
       </main>
     )

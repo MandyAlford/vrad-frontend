@@ -39,7 +39,7 @@ select {
 
 button {
   color: white;
-  width: 75%;
+  width: 100%;
   padding: 2% 3%;
   background: rgba(228, 74, 26, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -50,4 +50,9 @@ button {
 button:hover {
   background: rgba(228, 74, 26);
   border: 2px solid rgba(255, 255, 255);
+}
+
+.submit-nav {
+  width: 75%;
+  padding: 0;
 }

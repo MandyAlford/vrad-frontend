@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom';
 import './LoginForm.css';
 
 class LoginForm extends Component {
@@ -17,7 +18,11 @@ class LoginForm extends Component {
           <option value='vacation'>VACATION</option>
           <option value='other'>OTHER</option>
         </select>
-        <button id='submit-button'>SUBMIT</button>
+        <NavLink to='/areas' className='submit-nav'>
+          <button id='submit-button' type='submit'>
+            SUBMIT
+          </button>
+        </NavLink>
       </form>
     )
   }
