@@ -1,9 +1,11 @@
 main {
   height: 100vh;
-  background: url(../assets/background.jpg) no-repeat center;
+  background: url(../assets/background.jpg) no-repeat;
+  background-position: 0% 70%;
   background-size: cover;
   display: flex;
   flex-flow: row nowrap;
+  background-attachment: fixed;
 }
 
 .login-screen {

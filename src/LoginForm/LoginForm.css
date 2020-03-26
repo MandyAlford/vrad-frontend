@@ -13,9 +13,8 @@ background: rgba(28, 26, 26, 0.9);
 border: 1px solid rgba(255, 255, 255, 0.5);
 box-sizing: border-box;
 border-radius: 15px;
-height: 40px;
 margin-bottom: 5%;
-padding-left: 3%;
+padding: 2% 3%;
 width: 75%;
 color: white !important;
 font-size: 1.2em !important;
@@ -25,12 +24,20 @@ font-size: 1.2em !important;
   color: white !important;
 }
 
+select {
+  appearance: none;
+  background-image: url('../assets/down-arrow.png');
+  background-size: 15px 15px;
+  background-position: 94% 50%;
+  background-repeat: no-repeat;
+}
+
 button {
 color: white;
 width: 75%;
+padding: 2% 3%;
 background: rgba(228, 74, 26, 0.8);
 border: 2px solid rgba(255, 255, 255, 0.5);
 border-radius: 15px;
-height: 40px;
 font-size: 1.2em !important;
 }

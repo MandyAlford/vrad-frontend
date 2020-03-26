@@ -11,12 +11,12 @@ class LoginForm extends Component {
       <form className='login-form'>
         <input type='text' id='name-input' placeholder='NAME'/>
         <input type='text' id='email-input' placeholder='EMAIL'/>
-        <input list='travel-types' name='travel-type'placeholder='TYPE OF TRAVEL'/>
-        <datalist id='travel-types'>
-          <option value='Business'/>
-          <option value='Vacation'/>
-          <option value='Other'/>
-        </datalist>
+        <select>
+          <option value="" disabled selected>TYPE OF TRAVEL </option>
+          <option value='business'>BUSINESS</option>
+          <option value='vacation'>VACATION</option>
+          <option value='other'>OTHER</option>
+        </select>
         <button id='submit-button'>SUBMIT</button>
       </form>
     )
