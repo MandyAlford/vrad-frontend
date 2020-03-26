@@ -1,4 +1,28 @@
 
+.login-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  background: url(../assets/background.jpg) no-repeat;
+  background-position: 0% 70%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+img {
+  height:50px;
+}
+
+.login-header {
+  align-items: center;
+  color: white;
+  display: flex;
+  width: 100%;
+  padding-left: 4%;
+  position: fixed;
+}
+
 .login-form {
   display: flex;
   flex-flow: column nowrap;
@@ -39,7 +63,7 @@ select {
 
 button {
   color: white;
-  width: 100%;
+  width: 75%;
   padding: 2% 3%;
   background: rgba(228, 74, 26, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -50,9 +74,4 @@ button {
 button:hover {
   background: rgba(228, 74, 26);
   border: 2px solid rgba(255, 255, 255);
-}
-
-.submit-nav {
-  width: 75%;
-  padding: 0;
 }

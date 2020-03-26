@@ -1,29 +1,5 @@
 main {
   height: 100vh;
-  background: url(../assets/background.jpg) no-repeat;
-  background-position: 0% 70%;
-  background-size: cover;
   display: flex;
   flex-flow: row nowrap;
-  background-attachment: fixed;
-}
-
-.login-screen {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-img {
-  height:50px;
-}
-
-.login-header {
-  align-items: center;
-  color: white;
-  display: flex;
-  width: 100%;
-  padding-left: 4%;
-  position: fixed;
 }
