@@ -6,9 +6,12 @@
   border-radius: 15px;
   padding: 1%;
   margin: 2%;
+  margin-left: 7%;
 }
 
 .card-container {
+display: flex;
+flex-wrap: wrap;
 width: 100vw;
 height: 100vh;
 background: rgba(26, 30, 37, 0.93);
@@ -16,7 +19,7 @@ background: rgba(26, 30, 37, 0.93);
 
 .areas-header {
 align-items: center;
-background-color: yellow;
+background-color: white;
 display: flex;
 justify-content: space-between;
 width: 100vw;
@@ -31,4 +34,8 @@ h1 {
 .button-container {
   display: flex;
   align-items: center;
+}
+
+.header-description {
+  font-size: 2em;
 }

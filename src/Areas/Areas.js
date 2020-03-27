@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card';
-import map from '../assets/map.png';
+import blackmap from '../assets/black-map.png';
 
 class Areas extends Component {
   constructor() {
@@ -37,13 +37,13 @@ class Areas extends Component {
       <div className='card-container'>
       <header className='areas-header'>
         <div className='logo-container'>
-            <img src= {map} />
+            <img src= {blackmap} />
             <h1>VRAD</h1>
         </div>
-          <h2>WELCOME, USER!</h2>
+          <h2 className='header-description'>WELCOME, USER!</h2>
         <div className='button-container'>
           <button id='favorite-button'>FAVORITES</button>
-          <button id='log-off-button'>LOG OFF</button>
+          <button id='log-off-button'>LOGOFF</button>
         </div>
       </header>
       {areas.map(item => {
