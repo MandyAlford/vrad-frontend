@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { aPullAreas } from '../util/ApiCalls';
 import Card from '../Card/Card';
+import map from '../assets/map.png';
 
 class Areas extends Component {
   constructor() {
@@ -34,7 +34,18 @@ class Areas extends Component {
     const { areas } = this.state;
 
     return (
-      <div>
+      <div className='card-container'>
+      <header className='areas-header'>
+        <div className='logo-container'>
+            <img src= {map} />
+            <h1>VRAD</h1>
+        </div>
+          <h2>WELCOME, USER!</h2>
+        <div className='button-container'>
+          <button id='favorite-button'>FAVORITES</button>
+          <button id='log-off-button'>LOG OFF</button>
+        </div>
+      </header>
       {areas.map(item => {
         return <Card
           shortName={ item.shortName }
