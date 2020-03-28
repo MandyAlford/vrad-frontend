@@ -38,27 +38,27 @@ class Areas extends Component {
 
     return (
       <div className='card-container'>
-      <header className='areas-header'>
-        <div className='logo-container'>
+        <header className='areas-header'>
+          <div className='logo-container'>
             <img src= {blackmap} />
             <h1 className="vrad">VRAD</h1>
-        </div>
-        <div className='header-text-container'>
-          <h2 className='header-description'>WELCOME, {name.toUpperCase()}!</h2>
-          <p className='travel-type'>TRAVEL TYPE: {type.toUpperCase()}</p>
-        </div>
-        <div className='button-container'>
-          <button className='header-buttons' id='favorite-button'>FAVORITES</button>
-          <button className='header-buttons' id='log-off-button'>LOG OFF</button>
-        </div>
-      </header>
-      {areas.map(item => {
-        return <Card
-          shortName={ item.shortName }
-          longName={ item.longName }
-          description={ item.description }
-        />
-      })}
+          </div>
+          <div className='header-text-container'>
+            <h2 className='header-description'>WELCOME, {name.toUpperCase()}!</h2>
+            <p className='travel-type'>TRAVEL TYPE: {type.toUpperCase()}</p>
+          </div>
+          <form className='button-container' onSubmit={this.props.logoutUser}>
+            <button className='header-buttons' id='favorite-button'>FAVORITES</button>
+            <button className='header-buttons' id='log-off-button' type='submit'>LOG OFF</button>
+          </form>
+        </header>
+        {areas.map(item => {
+          return <Card
+            shortName={ item.shortName }
+            longName={ item.longName }
+            description={ item.description }
+          />
+        })}
 
       </div>
     )
