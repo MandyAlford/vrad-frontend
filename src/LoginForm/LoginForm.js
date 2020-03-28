@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './LoginForm.css';
-import Areas from '../Areas/Areas';
-import App from '../App/App';
-
 import map from '../assets/map.png';
 
 class LoginForm extends Component {
@@ -15,19 +12,14 @@ class LoginForm extends Component {
     this.props.change(key, event);
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.props.submit();
-  }
-
   render() {
     return (
       <div className='login-screen'>
         <header className='login-header'>
-            <img src= {map} />
-            <h1>VRAD</h1>
+          <img src= {map} />
+          <h1>VRAD</h1>
         </header>
-        <form className='login-form' onSubmit={this.handleSubmit}>
+        <form className='login-form' onSubmit={this.props.loginUser}>
           <p className="error hidden">Please complete all required fields!</p>
           <input type='text' id='name' placeholder='NAME' onChange={this.handleChange}/>
           <input type='text' id='email' placeholder='EMAIL'onChange={this.handleChange}/>
@@ -37,9 +29,9 @@ class LoginForm extends Component {
             <option value='vacation'>VACATION</option>
             <option value='other'>OTHER</option>
           </select>
-            <button id='submit-button' type='submit' onClick={this.handleSubmit}>
-              SUBMIT
-            </button>
+          <button id='submit-button' type='submit'>
+            SUBMIT
+          </button>
         </form>
       </div>
     )
