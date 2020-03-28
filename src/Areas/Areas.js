@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card';
 import blackmap from '../assets/black-map.png';
+import './Areas.css';
 
 class Areas extends Component {
   constructor(props) {
