@@ -32,6 +32,8 @@ class Areas extends Component {
 
   render() {
     const { areas } = this.state;
+    let name = this.props.name;
+    let type = this.props.type;
 
     return (
       <div className='card-container'>
@@ -40,7 +42,7 @@ class Areas extends Component {
             <img src= {blackmap} />
             <h1>VRAD</h1>
         </div>
-          <h2 className='header-description'>WELCOME, USER!</h2>
+          <h2 className='header-description'>WELCOME, {name.toUpperCase()}!</h2>
         <div className='button-container'>
           <button id='favorite-button'>FAVORITES</button>
           <button id='log-off-button'>LOGOFF</button>

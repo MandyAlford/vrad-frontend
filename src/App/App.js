@@ -36,7 +36,7 @@ class App extends Component {
 
         <Route
         path='/areas' exact render={
-          (props) => <Areas />
+          (props) => <Areas name={this.state.name} type={this.state.type}/>
         }/>
       </main>
     )
