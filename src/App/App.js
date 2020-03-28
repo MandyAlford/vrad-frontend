@@ -29,6 +29,9 @@ class App extends Component {
 
   logoutUser = (event) => {
     event.preventDefault();
+    this.state.name = ''
+    this.state.email = ''
+    this.state.type = ''
     this.props.history.replace('/')
   }
 
