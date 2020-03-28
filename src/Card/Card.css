@@ -10,20 +10,21 @@
 }
 
 .card-container {
-display: flex;
-flex-wrap: wrap;
-width: 100vw;
-height: 100vh;
-background: rgba(26, 30, 37, 0.93);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+  background: rgba(26, 30, 37, 0.93);
 }
 
 .areas-header {
-align-items: center;
-background-color: white;
-display: flex;
-justify-content: space-between;
-width: 100vw;
-padding-left: 4%;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0 2%;
 }
 
 h1 {
@@ -34,8 +35,36 @@ h1 {
 .button-container {
   display: flex;
   align-items: center;
+  width: 30%;
 }
 
 .header-description {
   font-size:2em;
+  margin: 3px;
+}
+
+.travel-type {
+  width: 100%;
+  text-align: center;
+  margin: 3px;
+}
+
+.header-text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0;
+}
+
+.header-buttons {
+  margin: 0 3px 0 10px;
+  width: 40%;
+}
+
+.button-container {
+  justify-content: flex-end;
+}
+
+.vrad {
+  font-size: 3em;
+  margin: 3% 2%;
 }
