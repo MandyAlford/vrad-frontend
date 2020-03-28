@@ -1,41 +1,10 @@
 .area-card {
-  width: 35%;
-  height: 60%;
-  text-align: center;
   background: #FFFFFF;
   border-radius: 15px;
-  padding: 1%;
+  height: 60%;
   margin: 2%;
   margin-left: 7%;
-}
-
-.card-container {
-display: flex;
-flex-wrap: wrap;
-width: 100vw;
-height: 100vh;
-background: rgba(26, 30, 37, 0.93);
-}
-
-.areas-header {
-align-items: center;
-background-color: white;
-display: flex;
-justify-content: space-between;
-width: 100vw;
-padding-left: 4%;
-}
-
-h1 {
-  color: rgba(228, 74, 26, 0.8);
-}
-
-.logo-container,
-.button-container {
-  display: flex;
-  align-items: center;
-}
-
-.header-description {
-  font-size:2em;
+  padding: 1%;
+  text-align: center;
+  width: 35%;
 }

@@ -1,0 +1,59 @@
+.card-container {
+  background: rgba(26, 30, 37, 0.93);
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.areas-header {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+  width: 100vw;
+}
+
+h1 {
+  color: rgba(228, 74, 26, 0.8);
+}
+
+.logo-container,
+.button-container {
+  align-items: center;
+  display: flex;
+  width: 30%;
+}
+
+.header-description {
+  font-size:2em;
+  margin: 3px;
+}
+
+.travel-type {
+  margin: 3px;
+  text-align: center;
+  width: 100%;
+}
+
+.header-text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0;
+}
+
+.header-buttons {
+  margin: 0 3px 0 10px;
+  width: 40%;
+}
+
+.button-container {
+  justify-content: flex-end;
+}
+
+.vrad {
+  font-size: 3em;
+  margin: 3% 2%;
+}

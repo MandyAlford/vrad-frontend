@@ -1,13 +1,13 @@
 
 .login-screen {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
   background: url(../assets/background.jpg) no-repeat;
+  background-attachment: fixed;
   background-position: 0% 70%;
   background-size: cover;
-  background-attachment: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  width: 100vw;
 }
 
 img {
@@ -18,30 +18,30 @@ img {
   align-items: center;
   color: white;
   display: flex;
-  width: 100%;
   padding-left: 4%;
   position: fixed;
+  width: 100%;
 }
 
 .login-form {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  width: 400px;
   margin: auto;
+  width: 400px;
 }
 
 input,
 select {
   background: rgba(28, 26, 26, 0.9);
   border: 2px solid rgba(255, 255, 255, 0.5);
-  box-sizing: border-box;
   border-radius: 15px;
+  box-sizing: border-box;
+  color: white !important;
+  font-size: 1.2em !important;
   margin-bottom: 5%;
   padding: 2% 3%;
   width: 75%;
-  color: white !important;
-  font-size: 1.2em !important;
 }
 
 input:hover,
@@ -56,19 +56,19 @@ select:hover {
 select {
   appearance: none;
   background-image: url('../assets/down-arrow.png');
-  background-size: 15px 15px;
   background-position: 94% 50%;
   background-repeat: no-repeat;
+  background-size: 15px 15px;
 }
 
 button {
-  color: white;
-  width: 75%;
-  padding: 2% 3%;
   background: rgba(228, 74, 26, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
+  color: white;
   font-size: 1.2em !important;
+  padding: 2% 3%;
+  width: 75%;
 }
 
 button:hover {
@@ -77,13 +77,13 @@ button:hover {
 }
 
 .error {
-  color: white;
-  width: 70%;
-  padding: 2%;
   background: rgba(228, 74, 26, 0.9);
   border-radius: 15px;
+  color: white;
   font-size: 1.2em;
+  padding: 2%;
   text-align: center;
+  width: 70%;
 }
 
 .hidden {
