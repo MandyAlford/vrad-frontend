@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import blackmap from '../assets/black-map.png';
 
 class Areas extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       areas: [],
