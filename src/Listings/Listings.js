@@ -31,16 +31,11 @@ class Listings extends Component {
     })
   }
 
-  seeMore = (event) => {
-    console.log(event.target.id)
-  }
-
   render() {
     return this.state.listings.map(item => {
         return <ListingCard
           name={ item.name }
           listingId={ item.listingId }
-          seeMore = { this.seeMore }
         />
       })
 

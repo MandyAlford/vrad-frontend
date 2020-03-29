@@ -6,15 +6,14 @@ class ListingCard extends Component {
     super();
   }
 
-  handleClick = (event) => {
-    this.props.seeMore(event)
-  }
-
   render() {
+    let navUrl = `${this.props.listingId}`
     return (
       <div className='listing-card'>
         <p>I am {this.props.name} {this.props.listingId}</p>
-        <button className='listing-button' id={this.props.listingId} onClick={this.handleClick}>SEE MORE</button>
+        <NavLink to={navUrl}>
+          <button className='listing-button' id={this.props.listingId}>SEE MORE</button>
+        </NavLink>
       </div>
     )
   }
