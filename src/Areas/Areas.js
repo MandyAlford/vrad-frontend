@@ -20,6 +20,7 @@ class Areas extends Component {
               .then(res => res.json())
               .then(areaDetails => {
                 return {
+                  id: areaDetails.id,
                   shortName: area.area,
                   longName: areaDetails.name,
                   description: areaDetails.about
@@ -54,9 +55,12 @@ class Areas extends Component {
         </header>
         {areas.map(item => {
           return <Card
+            key={ item.id }
+            id={ item.id }
             shortName={ item.shortName }
             longName={ item.longName }
             description={ item.description }
+            routeToListings={ this.props.routeToListings }
           />
         })}
 
