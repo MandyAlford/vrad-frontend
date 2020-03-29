@@ -50,7 +50,7 @@ class Areas extends Component {
           </div>
           <form className='button-container'>
             <button className='header-buttons' id='favorite-button'>FAVORITES</button>
-            <button className='header-buttons' id='log-off-button' type='submit'onSubmit={this.props.logoutUser}>LOG OFF</button>
+            <button className='header-buttons' id='log-off-button' onClick={this.props.logoutUser}>LOG OFF</button>
           </form>
         </header>
         {areas.map(item => {
