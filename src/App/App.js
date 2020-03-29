@@ -43,7 +43,6 @@ class App extends Component {
   routeToListings = (event) => {
     event.preventDefault();
     this.props.history.push(`/areas/${event.target.id}/listings/`)
-    debugger
     this.setState({
       currentArea: event.target.parentElement.children[0].textContent
     })
