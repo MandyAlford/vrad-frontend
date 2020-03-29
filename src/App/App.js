@@ -35,6 +35,11 @@ class App extends Component {
     this.props.history.replace('/')
   }
 
+  routeToListings = (event) => {
+    event.preventDefault();
+    this.props.history.push(`/areas/${event.target.id}/listings/`)
+  }
+
   render() {
     return (
       <main>
@@ -50,7 +55,12 @@ class App extends Component {
             name={this.state.name}
             type={this.state.type}
             logoutUser={this.logoutUser}
+            routeToListings={this.routeToListings}
           />
+        </Route>
+
+        <Route path='/areas/:area_id/listings' exact>
+          I am here
         </Route>
       </main>
     )
