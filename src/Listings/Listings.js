@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import ListingCard from '../ListingCard/ListingCard';
+import IndividualListing from '../IndividualListing/IndividualListing';
 
 class Listings extends Component {
   constructor() {
@@ -33,13 +34,15 @@ class Listings extends Component {
 
   render() {
     return this.state.listings.map(item => {
-        return <ListingCard
-          name={ item.name }
-          listingId={ item.listingId }
-        />
-      })
-
-
+        return (
+        <div className="listing-card">
+          <ListingCard
+            name={ item.name }
+            listingId={ item.listingId }
+          />
+        </div>
+      )
+    })
   }
 }
 

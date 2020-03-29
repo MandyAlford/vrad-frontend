@@ -3,7 +3,8 @@ import { Route, NavLink, withRouter } from 'react-router-dom';
 import './App.css';
 import LoginForm from '../LoginForm/LoginForm';
 import Areas from '../Areas/Areas';
-import Listings from '../Listings/Listings'
+import Listings from '../Listings/Listings';
+import IndividualListing from '../IndividualListing/IndividualListing';
 
 class App extends Component {
   constructor() {
@@ -64,6 +65,10 @@ class App extends Component {
 
         <Route path='/areas/:area_id/listings' exact>
           <Listings />
+        </Route>
+
+        <Route path='/areas/:area_id/listings/:listing_id'>
+          <IndividualListing />
         </Route>
 
       </main>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {  NavLink  } from 'react-router-dom';
+import {  NavLink, Route  } from 'react-router-dom';
+
 
 class ListingCard extends Component {
   constructor(props){
@@ -11,7 +12,7 @@ class ListingCard extends Component {
     return (
       <div className='listing-card'>
         <p>I am {this.props.name} {this.props.listingId}</p>
-        <NavLink to={navUrl}>
+        <NavLink to={navUrl} >
           <button className='listing-button' id={this.props.listingId}>SEE MORE</button>
         </NavLink>
       </div>
@@ -19,4 +20,4 @@ class ListingCard extends Component {
   }
 }
 
-export default (ListingCard);
+export default ListingCard;
