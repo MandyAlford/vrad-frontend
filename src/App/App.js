@@ -4,7 +4,9 @@ import './App.css';
 import LoginForm from '../LoginForm/LoginForm';
 import Areas from '../Areas/Areas';
 import Listings from '../Listings/Listings';
+import IndividualListing from '../IndividualListing/IndividualListing';
 import Header from '../Header/Header';
+
 
 class App extends Component {
   constructor() {
@@ -83,6 +85,14 @@ class App extends Component {
             logoutUser={this.logoutUser}
           />
           <Listings />
+        </Route>
+
+        <Route path='/areas/:area_id/listings/:listing_id'>
+        <Header
+          headerInfo={headerText}
+          logoutUser={this.logoutUser}
+        />
+          <IndividualListing />
         </Route>
 
       </main>
