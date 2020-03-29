@@ -48,9 +48,9 @@ class Areas extends Component {
             <h2 className='header-description'>WELCOME, {name.toUpperCase()}!</h2>
             <p className='travel-type'>TRAVEL TYPE: {type.toUpperCase()}</p>
           </div>
-          <form className='button-container' onSubmit={this.props.logoutUser}>
+          <form className='button-container'>
             <button className='header-buttons' id='favorite-button'>FAVORITES</button>
-            <button className='header-buttons' id='log-off-button' type='submit'>LOG OFF</button>
+            <button className='header-buttons' id='log-off-button' onClick={this.props.logoutUser}>LOG OFF</button>
           </form>
         </header>
         {areas.map(item => {
