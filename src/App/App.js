@@ -3,6 +3,7 @@ import { Route, NavLink, withRouter } from 'react-router-dom';
 import './App.css';
 import LoginForm from '../LoginForm/LoginForm';
 import Areas from '../Areas/Areas';
+import Listings from '../Listings/Listings'
 
 class App extends Component {
   constructor() {
@@ -60,7 +61,7 @@ class App extends Component {
         </Route>
 
         <Route path='/areas/:area_id/listings' exact>
-          I am here
+          <Listings />
         </Route>
       </main>
     )
