@@ -32,13 +32,19 @@ class Listings extends Component {
   }
 
   render() {
+    let listingInfo = this.state.listings.map(item => {
+              return <ListingCard
+                name={ item.name }
+                listingId={ item.listingId }
+              />
+            })
 
-    return this.state.listings.map(item => {
-        return <ListingCard
-          name={ item.name }
-          listingId={ item.listingId }
-        />
-      })
+    return (
+      <div>
+        { listingInfo }
+      </div>
+    )
+
 
 
   }
