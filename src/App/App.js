@@ -63,6 +63,7 @@ class App extends Component {
         <Route path='/areas/:area_id/listings' exact>
           <Listings />
         </Route>
+
       </main>
     )
   }
