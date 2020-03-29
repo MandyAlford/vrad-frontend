@@ -3,7 +3,8 @@ import { Route, NavLink, withRouter } from 'react-router-dom';
 import './App.css';
 import LoginForm from '../LoginForm/LoginForm';
 import Areas from '../Areas/Areas';
-import Listings from '../Listings/Listings'
+import Listings from '../Listings/Listings';
+import Header from '../Header/Header';
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,8 @@ class App extends Component {
     this.state = {
       name: '',
       email: '',
-      type: ''
+      type: '',
+      currentArea: '',
     }
   }
 
@@ -41,9 +43,19 @@ class App extends Component {
   routeToListings = (event) => {
     event.preventDefault();
     this.props.history.push(`/areas/${event.target.id}/listings/`)
+    debugger
+    this.setState({
+      currentArea: event.target.parentElement.children[0].textContent
+    })
   }
 
   render() {
+    let headerText = [
+      <h2 className='header-description'>WELCOME, {this.state.name.toUpperCase()}!</h2>,
+      <p className='travel-type'>TRAVEL TYPE: {this.state.type.toUpperCase()}</p>
+    ]
+
+    let listingText = `${(this.state.currentArea).toUpperCase()} LISTINGS: `
     return (
       <main>
         <Route path='/' exact>
@@ -54,6 +66,10 @@ class App extends Component {
         </Route>
 
         <Route path='/areas' exact>
+          <Header
+            headerInfo={headerText}
+            logoutUser={this.logoutUser}
+          />
           <Areas
             name={this.state.name}
             type={this.state.type}
@@ -63,6 +79,10 @@ class App extends Component {
         </Route>
 
         <Route path='/areas/:area_id/listings' exact>
+          <Header
+            headerInfo={listingText}
+            logoutUser={this.logoutUser}
+          />
           <Listings />
         </Route>
 

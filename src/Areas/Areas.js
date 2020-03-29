@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from '../Card/Card';
 import blackmap from '../assets/black-map.png';
 import './Areas.css';
+import Header from '../Header/Header';
 
 class Areas extends Component {
   constructor(props) {
@@ -37,22 +38,11 @@ class Areas extends Component {
     let name = this.props.name;
     let type = this.props.type;
 
+
+
     return (
       <div className='card-container'>
-        <header className='areas-header'>
-          <div className='logo-container'>
-            <img src= {blackmap} />
-            <h1 className="vrad">VRAD</h1>
-          </div>
-          <div className='header-text-container'>
-            <h2 className='header-description'>WELCOME, {name.toUpperCase()}!</h2>
-            <p className='travel-type'>TRAVEL TYPE: {type.toUpperCase()}</p>
-          </div>
-          <form className='button-container'>
-            <button className='header-buttons' id='favorite-button'>FAVORITES</button>
-            <button className='header-buttons' id='log-off-button' onClick={this.props.logoutUser}>LOG OFF</button>
-          </form>
-        </header>
+
         {areas.map(item => {
           return <Card
             key={ item.id }
