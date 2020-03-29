@@ -37,7 +37,7 @@ class IndividualListing extends Component {
   render () {
     return (
       <div className='individual-listing-main'>
-        <h3 className='listing-name'>{this.state.name}</h3>
+        <h3 className='listing-name'>{this.state.name.toUpperCase()}</h3>
         <h4 className='listing-details-bold'>{this.state.area.toUpperCase()}</h4>
         <h4 className='listing-details-bold'>ADDRESS:</h4> <p>{this.state.address}</p>
         <h4 className='listing-details-bold'>SUPERHOST:</h4> <p>{this.state.superhost}</p>
@@ -45,6 +45,7 @@ class IndividualListing extends Component {
         <h4 className='listing-details-bold'>BATHS:</h4> <p>{this.state.baths}</p>
         <h4 className='listing-details-bold'>NIGHTLY COST:</h4> <p>{this.state.costPerNight}</p>
         <h4 className='listing-details-bold'>FEATURES:</h4> <p>{this.state.features.join(", ")}</p>
+        <button>FAVORITE</button>
       </div>
     )
   }
