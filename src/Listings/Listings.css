@@ -1,0 +1,8 @@
+.listings-container {
+  background: rgba(26, 30, 37, 0.93);
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  overflow-y: scroll;
+  width: 100%;
+}

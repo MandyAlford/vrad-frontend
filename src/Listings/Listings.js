@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import ListingCard from '../ListingCard/ListingCard';
+import './Listings.css';
 
 class Listings extends Component {
   constructor() {
@@ -40,13 +41,10 @@ class Listings extends Component {
             })
 
     return (
-      <div>
+      <div className='listings-container'>
         { listingInfo }
       </div>
     )
-
-
-
   }
 }
 
