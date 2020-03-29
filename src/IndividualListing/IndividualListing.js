@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './IndividualListing.css';
 
 class IndividualListing extends Component {
   constructor(props){
@@ -11,7 +12,8 @@ class IndividualListing extends Component {
       baths: 0,
       costPerNight: 0,
       features: [],
-      area: ''
+      area: '',
+      id: 0
     }
   }
 
@@ -30,7 +32,8 @@ class IndividualListing extends Component {
         baths: listingDetails.details.baths,
         costPerNight: listingDetails.details.cost_per_night,
         features: listingDetails.details.features,
-        area: listingDetails.area
+        area: listingDetails.area,
+        id: listingId
       }))
   }
 
@@ -39,13 +42,16 @@ class IndividualListing extends Component {
       <div className='individual-listing-main'>
         <h3 className='listing-name'>{this.state.name.toUpperCase()}</h3>
         <h4 className='listing-details-bold'>{this.state.area.toUpperCase()}</h4>
+        <img className='listing-image' src={`/images/${this.state.id}_a.jpg`} />
+        <img className='listing-image' src={`/images/${this.state.id}_b.jpg`} />
+        <img className='listing-image' src={`/images/${this.state.id}_c.jpg`} />
         <h4 className='listing-details-bold'>ADDRESS:</h4> <p>{this.state.address}</p>
         <h4 className='listing-details-bold'>SUPERHOST:</h4> <p>{this.state.superhost}</p>
         <h4 className='listing-details-bold'>BEDS:</h4> <p>{this.state.beds}</p>
         <h4 className='listing-details-bold'>BATHS:</h4> <p>{this.state.baths}</p>
         <h4 className='listing-details-bold'>NIGHTLY COST:</h4> <p>{this.state.costPerNight}</p>
         <h4 className='listing-details-bold'>FEATURES:</h4> <p>{this.state.features.join(", ")}</p>
-        <button>FAVORITE</button>
+        <button className='favorite-button'>FAVORITE</button>
       </div>
     )
   }
