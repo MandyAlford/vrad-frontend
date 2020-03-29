@@ -8,7 +8,7 @@ const Card = (props) => {
       <h2>{props.shortName}</h2>
       <h3>{props.longName}</h3>
       <p>{props.description}</p>
-      <button type='area-button'>SEE LISTINGS</button>
+      <button type='area-button' onClick={props.routeToListings} id={props.id}>SEE LISTINGS</button>
     </div>
   )
 }
