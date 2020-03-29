@@ -1,0 +1,14 @@
+.listing-card {
+  background: #FFFFFF;
+  border-radius: 15px;
+  height: 60%;
+  margin: 2%;
+  margin-left: 7%;
+  padding: 1%;
+  text-align: center;
+  width: 35%;
+}
+
+.listing-image {
+  height: 150px;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import ListingCard from '../ListingCard/ListingCard';
 import IndividualListing from '../IndividualListing/IndividualListing';
+import './Listings.css';
 
 class Listings extends Component {
   constructor() {

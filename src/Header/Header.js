@@ -8,23 +8,24 @@ class Header extends Component {
     super();
   }
 
-  logOff = (event) => {
-    debugger
-  }
-
   render() {
     return(
-      <header className='areas-header'>
-        <div className='logo-container'>
-            <img src= { blackmap } />
-            <h1>VRAD</h1>
-        </div>
-          <h2 className='header-description'>WELCOME, USER!</h2>
-        <form className='Header-buttons'>
-          <button id='favorite-button'>FAVORITES</button>
-          <button id='log-off-button' onClick={ this.logOff }>LOGOFF</button>
-        </form>
-      </header>
+
+        <header className='areas-header'>
+          <div className='logo-container'>
+            <img src= {blackmap} />
+            <h1 className="vrad">VRAD</h1>
+          </div>
+          <div className='header-text-container'>
+            {this.props.headerInfo}
+          </div>
+          <form className='button-container'>
+            <button className='header-buttons' id='favorite-button'>FAVORITES</button>
+            <button className='header-buttons' id='log-off-button' onClick={this.props.logoutUser}>LOG OFF</button>
+          </form>
+        </header>
+
+
     )
   }
 }
