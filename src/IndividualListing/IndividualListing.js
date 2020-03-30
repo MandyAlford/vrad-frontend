@@ -57,6 +57,4 @@ class IndividualListing extends Component {
   }
 }
 
-        // <h3 className="listing-address">{this.state.listingDetails.address.street} {this.state.listingDetails.address.zip}</h3>
-
 export default IndividualListing;
