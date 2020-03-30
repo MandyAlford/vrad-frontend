@@ -34,7 +34,7 @@ img {
 input,
 select {
   background: rgba(28, 26, 26, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
   box-sizing: border-box;
   color: white !important;
@@ -46,7 +46,7 @@ select {
 
 input:hover,
 select:hover {
-  border: 2px solid rgba(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255);
 }
 
 ::placeholder {
@@ -63,7 +63,7 @@ select {
 
 button {
   background: rgba(228, 74, 26, 0.8);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
   color: white;
   font-size: 1.2em !important;
@@ -73,7 +73,7 @@ button {
 
 button:hover {
   background: rgba(228, 74, 26);
-  border: 2px solid rgba(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255);
 }
 
 .error {

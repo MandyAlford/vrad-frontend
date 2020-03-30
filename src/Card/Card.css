@@ -14,14 +14,14 @@
 .area-image {
   height: 60%;
   margin: 0;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .area-text {
+  height: 15%;
   margin: 2% 1% 0 1%;
   object-fit: fill;
-  height: 15%;
 }
 
 .area-header-text {
@@ -29,8 +29,8 @@
 }
 
 .area-header-container {
-  object-fit: fill;
   height: 10%;
+  object-fit: fill;
 }
 
 .area-button {
