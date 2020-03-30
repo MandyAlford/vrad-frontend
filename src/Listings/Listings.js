@@ -36,12 +36,10 @@ class Listings extends Component {
   render() {
     return this.state.listings.map(item => {
         return (
-        <div className="listing-card">
           <ListingCard
             name={ item.name }
             listingId={ item.listingId }
           />
-        </div>
       )
     })
   }

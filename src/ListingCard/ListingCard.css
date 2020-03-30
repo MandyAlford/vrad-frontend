@@ -8,8 +8,10 @@
   padding: 1%;
   text-align: center;
   width: 35%;
+  border: 1px solid red;
 }
 
 .listing-card-image {
   width: 55%;
+  border: 2px solid blue;
 }
