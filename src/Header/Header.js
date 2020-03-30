@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import LoginForm from '../LoginForm/LoginForm';
 import blackmap from '../assets/black-map.png';
+import './Header.css';
 
 class Header extends Component {
   constructor() {

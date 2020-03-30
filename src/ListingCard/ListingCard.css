@@ -4,11 +4,12 @@
   height: 60%;
   margin: 2%;
   margin-left: 7%;
+  min-height: 300px;
   padding: 1%;
   text-align: center;
   width: 35%;
 }
 
-.listing-image {
-  height: 150px;
+.listing-card-image {
+  width: 55%;
 }

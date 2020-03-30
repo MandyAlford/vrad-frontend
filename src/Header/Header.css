@@ -1,0 +1,43 @@
+.areas-header {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+  width: 100vw;
+}
+
+.vrad {
+  color: rgba(228, 74, 26, 0.8);
+}
+
+.header-description {
+  font-size:2em;
+  margin: 3px;
+}
+
+.travel-type {
+  margin: 3px;
+  text-align: center;
+  width: 100%;
+}
+
+.header-text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0;
+}
+
+.header-buttons {
+  margin: 0 3px 0 10px;
+  width: 40%;
+}
+
+.button-container {
+  justify-content: flex-end;
+}
+
+.vrad {
+  font-size: 3em;
+  margin: 3% 2%;
+}
