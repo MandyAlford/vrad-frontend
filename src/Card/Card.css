@@ -1,10 +1,27 @@
 .area-card {
+  align-items: center;
   background: #FFFFFF;
   border-radius: 15px;
-  height: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
   margin: 2%;
   margin-left: 7%;
-  padding: 1%;
+  padding: 1% 0 0 0;
   text-align: center;
   width: 35%;
+}
+
+.area-image {
+  height: auto;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.area-text {
+  margin: 1% 1% 0 1%;
+}
+
+.area-button {
+  margin: 2%;
 }
