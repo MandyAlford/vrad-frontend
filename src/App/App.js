@@ -16,6 +16,7 @@ class App extends Component {
       email: '',
       type: '',
       currentArea: '',
+      favorites: []
     }
   }
 
@@ -50,6 +51,19 @@ class App extends Component {
     })
   }
 
+  addListingToFavorites = (event) => {
+    let favoriteListings = this.state.favorites
+    let currentId = event.target.id
+
+    if(!favoriteListings.includes(currentId)){
+      favoriteListings.push(currentId);
+    }
+    this.setState({
+      favorites: favoriteListings,
+    })
+    debugger
+  }
+
   render() {
     let headerText = [
       <h2 className='header-description'>WELCOME, {this.state.name.toUpperCase()}!</h2>,
@@ -57,6 +71,7 @@ class App extends Component {
     ]
 
     let listingText = `${(this.state.currentArea).toUpperCase()} LISTINGS: `
+
     return (
       <main>
         <Route path='/' exact>
@@ -92,7 +107,9 @@ class App extends Component {
           headerInfo={headerText}
           logoutUser={this.logoutUser}
         />
-          <IndividualListing />
+        <IndividualListing
+          addFavorites={this.addListingToFavorites}
+          />
         </Route>
 
       </main>
