@@ -10,8 +10,13 @@
   width: 100vw;
 }
 
-img {
-  height:50px;
+.logo {
+  height: 40px;
+}
+
+.VRAD-header-text {
+  font-size: 40px;
+  margin: 20px 5px;
 }
 
 .login-header {
