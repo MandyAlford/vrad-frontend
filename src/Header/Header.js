@@ -14,7 +14,7 @@ class Header extends Component {
 
         <header className='areas-header'>
           <div className='logo-container'>
-            <img src= {blackmap} />
+            <img className='logo' src= {blackmap} />
             <h1 className="vrad">VRAD</h1>
           </div>
           <div className='header-text-container'>
