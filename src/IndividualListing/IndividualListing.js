@@ -37,7 +37,7 @@ class IndividualListing extends Component {
       }))
   }
 
-  render () {
+  render (props) {
     return (
       <div className='individual-listing-main'>
         <h3 className='listing-name'>{this.state.name.toUpperCase()}</h3>
@@ -51,7 +51,7 @@ class IndividualListing extends Component {
         <h4 className='listing-details-bold'>BATHS:</h4> <p>{this.state.baths}</p>
         <h4 className='listing-details-bold'>NIGHTLY COST:</h4> <p>{this.state.costPerNight}</p>
         <h4 className='listing-details-bold'>FEATURES:</h4> <p>{this.state.features.join(", ")}</p>
-        <button className='favorite-button'>FAVORITE</button>
+        <button className='favorite-button' onClick={this.props.addFavorites} id={this.state.id}>FAVORITE</button>
       </div>
     )
   }
