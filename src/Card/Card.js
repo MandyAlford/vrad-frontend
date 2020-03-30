@@ -13,8 +13,10 @@ const Card = (props) => {
 
   return (
     <div className='area-card'>
-      <h2 className='area-text'>{props.shortName}</h2>
-      <h3 className='area-text'>{props.longName}</h3>
+      <span className='area-header-container'>
+        <h2 className='area-header-text'>{props.shortName}</h2>
+        <h3 className='area-header-text'>{props.longName}</h3>
+      </span>
       <img className='area-image' src={areaImage} alt={`image of ${props.shortName} neighborhood`}/>
       <p className='area-text'>{props.description}</p>
       <button className='area-button' onClick={props.routeToListings} id={props.id}>SEE LISTINGS</button>

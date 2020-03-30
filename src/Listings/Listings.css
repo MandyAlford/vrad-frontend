@@ -1,1 +1,7 @@
-
+.listings-dash {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}

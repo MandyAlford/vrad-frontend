@@ -12,15 +12,27 @@
 }
 
 .area-image {
-  height: auto;
-  margin: 5px 0;
+  height: 60%;
+  margin: 0;
   width: 100%;
+  object-fit: cover;
 }
 
 .area-text {
-  margin: 1% 1% 0 1%;
+  margin: 2% 1% 0 1%;
+  object-fit: fill;
+  height: 15%;
+}
+
+.area-header-text {
+  margin: 0 0 2% 0;
+}
+
+.area-header-container {
+  object-fit: fill;
+  height: 10%;
 }
 
 .area-button {
-  margin: 2%;
+  margin-bottom: 3%;
 }
