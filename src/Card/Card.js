@@ -8,7 +8,7 @@ import lohi from '../assets/lohi.jpg';
 
 
 const Card = (props) => {
-  let images = [rino, caphill];
+  let images = [rino, caphill, lohi, parkhill];
   let areaImage = images.find(image => image.includes(props.shortName.toLowerCase().split(" ").join("")));
 
   return (
