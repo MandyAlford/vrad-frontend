@@ -5,7 +5,7 @@ import blackmap from '../assets/black-map.png';
 import './Header.css';
 
 class Header extends Component {
-  constructor() {
+  constructor(props) {
     super();
   }
 
@@ -18,7 +18,7 @@ class Header extends Component {
             <h1 className="vrad">VRAD</h1>
           </div>
           <div className='header-text-container'>
-            {this.props.headerInfo}
+            <h2 className='header-area-name'>{this.props.headerInfo}</h2>
           </div>
           <form className='button-container'>
             <button className='header-buttons' id='favorite-button'>FAVORITES</button>

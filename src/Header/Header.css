@@ -3,7 +3,7 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 0 2%;
+  padding: 0;
   width: 100vw;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .header-description {
-  font-size:2em;
+  font-size:1.15em;
   margin: 3px;
 }
 
@@ -20,24 +20,38 @@
   margin: 3px;
   text-align: center;
   width: 100%;
+  font-size: .75em;
 }
 
 .header-text-container {
   display: flex;
   flex-flow: column nowrap;
   padding: 0;
+  width: 30%;
+  text-align: center;
 }
 
 .header-buttons {
   margin: 0 3px 0 10px;
-  width: 40%;
+  width: 35%;
 }
 
 .button-container {
   justify-content: flex-end;
+  padding-right: 15px;
+  width: 30%;
 }
 
 .vrad {
   font-size: 3em;
   margin: 3% 2%;
+}
+
+.header-area-name {
+  color: rgba(26, 30, 37, 0.93)
+}
+
+.logo-container {
+  padding-left: 15px;
+  width: 30%;
 }

@@ -1,12 +1,13 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
-
-
-
 
 .logo-container,
 .button-container {
