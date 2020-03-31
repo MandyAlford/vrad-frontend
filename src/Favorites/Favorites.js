@@ -36,18 +36,23 @@ class Favorites extends Component {
   }
 
   render() {
-    return (
-      <div className='card-container'>
+    let favoritesDisplay;
+    if(!this.state.favorites.length) {
+      favoritesDisplay = (<h1 className='error-message'> You have no Favorites </h1>)
+    } else {
+      favoritesDisplay = (
+        <div className='card-container'>
 
-      {this.state.favorites.map(item => {
-      return <FavoriteCard
-        details={item}
-        addFavorites={this.props.updateFavorites}
-        />
-    })}
-
-    </div>
-    )
+        {this.state.favorites.map(item => {
+        return <FavoriteCard
+          details={item}
+          addFavorites={this.props.updateFavorites}
+          />
+        })}
+        </div>
+      )
+    }
+    return favoritesDisplay;
   }
 }
 
