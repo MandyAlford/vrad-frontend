@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import FavoriteCard from '../FavoriteCard/FavoriteCard';
 import { fetchListing } from '../util/ApiCalls'
+import './Favorites.css';
 
 class Favorites extends Component {
   constructor() {
@@ -35,7 +36,10 @@ class Favorites extends Component {
   render() {
     let favoritesDisplay;
     if(!this.state.favorites.length) {
-      favoritesDisplay = (<h1 className='error-message'> You have no Favorites </h1>)
+      favoritesDisplay = (
+        <div className='fav-card-container'>
+          <h1 className='error-message'> You have no favorites! </h1>
+        </div>)
     } else {
       favoritesDisplay = (
         <div className='card-container'>

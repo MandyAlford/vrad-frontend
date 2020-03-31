@@ -1,13 +1,38 @@
 .favorite-card {
   background: #FFFFFF;
   border-radius: 15px;
-  min-height: 300px;
-  padding: 1% 0;
-  text-align: center;
-  width: 35%;
-  margin: 1% 0;
   display: flex;
   flex-flow: column nowrap;
-  text-align: center;
   justify-content: space-between;
+  margin: 1% 0;
+  padding: 1% 0;
+  text-align: center;
+  text-align: center !important;
+  width: 45%;
+}
+
+.favorite-image {
+  height: 45%;
+  margin: 0 0 2% 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.favorite-card-header {
+  margin: 0 0 1% 0;
+}
+
+.favorite-details {
+  background-color: white;
+  border-radius: 15px;
+  margin: 0;
+  padding: 2%;
+}
+
+.favorite-text {
+  margin: 2% 0;
+}
+
+.add-favorite-button {
+  margin: auto;
 }
