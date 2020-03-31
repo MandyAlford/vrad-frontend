@@ -52,16 +52,15 @@ class App extends Component {
   }
 
   updateFavorites = (event) => {
-    let favoriteListings = this.state.favorites
+    let favoriteListings = [...this.state.favorites]
     let currentId = event.target.id
 
     if(!favoriteListings.includes(currentId)){
       favoriteListings.push(currentId);
     } else {
-
-      let currentIndex = favoriteListings.indexOf(currentId);
-      favoriteListings.splice(currentIndex, 1);
-      debugger
+      favoriteListings = favoriteListings.filter(listing => {
+        return listing !== currentId;
+      })
     }
     this.setState({
       favorites: favoriteListings,

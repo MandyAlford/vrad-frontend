@@ -18,7 +18,7 @@ const FavoriteCard = (props) => {
     <p>ADDRESS: {props.details.address}</p>
     <p>SUPERHOST: {props.details.superhost}</p>
     <p>FEATURES: {props.details.features.join(", ")}</p>
-    <button className='favorite-button' onClick={props.addFavorites} id={props.details.id}>FAVORITE</button>
+    <button className='favorite-button' onClick={props.updateFavorites} id={props.details.id}>FAVORITE</button>
     </div>
   )
 }

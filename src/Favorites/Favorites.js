@@ -10,29 +10,42 @@ class Favorites extends Component {
     }
   }
 
+  getFavorites = () => {
+
+        const promises = this.props.favoriteListings.map(item => {
+          return fetch(`http://localhost:3001/api/v1/listings/${item}`)
+                .then(res => res.json())
+                .then(favoritesDetails => {
+                  let hostStatus = favoritesDetails.details.superhost ? 'Yes' : 'No'
+                  return {
+                    name: favoritesDetails.name,
+                    address: `${favoritesDetails.address.street}, Denver, CO ${favoritesDetails.address.zip}`,
+                    superhost: hostStatus,
+                    beds: favoritesDetails.details.beds,
+                    baths: favoritesDetails.details.baths,
+                    costPerNight: favoritesDetails.details.cost_per_night,
+                    features: favoritesDetails.details.features,
+                    area: favoritesDetails.area,
+                    id: item
+                    }
+                  })
+
+        })
+         Promise.all(promises)
+          .then(favorites => this.setState({ favorites }))
+  }
+
   componentDidMount() {
+    this.getFavorites();
+  }
 
-    const promises = this.props.favoriteListings.map(item => {
-      return fetch(`http://localhost:3001/api/v1/listings/${item}`)
-            .then(res => res.json())
-            .then(favoritesDetails => {
-              let hostStatus = favoritesDetails.details.superhost ? 'Yes' : 'No'
-              return {
-                name: favoritesDetails.name,
-                address: `${favoritesDetails.address.street}, Denver, CO ${favoritesDetails.address.zip}`,
-                superhost: hostStatus,
-                beds: favoritesDetails.details.beds,
-                baths: favoritesDetails.details.baths,
-                costPerNight: favoritesDetails.details.cost_per_night,
-                features: favoritesDetails.details.features,
-                area: favoritesDetails.area,
-                id: item
-                }
-              })
-
+  componentDidUpdate(prevProps, prevState) {
+    const updatedFavorites = this.state.favorites.filter((favorite) => {
+      return this.props.favoriteListings.includes(favorite.id)
     })
-     Promise.all(promises)
-      .then(favorites => this.setState({ favorites }))
+    if (updatedFavorites.length != this.state.favorites.length) {
+      this.setState({favorites: updatedFavorites})
+    }
   }
 
   render() {
@@ -46,7 +59,7 @@ class Favorites extends Component {
         {this.state.favorites.map(item => {
         return <FavoriteCard
           details={item}
-          addFavorites={this.props.updateFavorites}
+          updateFavorites={this.props.updateFavorites}
           />
         })}
         </div>
