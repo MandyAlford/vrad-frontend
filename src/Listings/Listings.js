@@ -35,16 +35,17 @@ class Listings extends Component {
   }
 
   render() {
-    return this.state.listings.map(item => {
-        return (
-        <div className="listing-card">
+    return (
+    <div className='listings-dash'>
+      {this.state.listings.map(item => (
           <ListingCard
             name={ item.name }
             listingId={ item.listingId }
           />
-        </div>
-      )
-    })
+        )
+      )}
+    </div>
+    )
   }
 }
 

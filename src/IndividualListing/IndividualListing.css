@@ -1,6 +1,7 @@
 .listing-image {
-  width: 30%;
+  width: 33.1%;
   height: auto;
+  margin: 0;
 }
 
 .favorite-button {
@@ -12,4 +13,39 @@
 .individual-listing-main {
   height: 100vh;
   width: 100vw;
+}
+
+.individual-listing-container {
+  margin: 2%;
+  padding: 2%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.listing-details {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+
+.listing-details-bold {
+  display: inline-block;
+  margin: 0;
+}
+
+.details-container {
+  margin: 2% 0;
+  padding: 0;
+}
+
+.images-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listing-header-container {
+  text-align: center;
+  margin-bottom: 1em;
 }

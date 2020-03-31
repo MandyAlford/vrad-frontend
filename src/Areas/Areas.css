@@ -1,14 +1,13 @@
 .card-container {
-  background: rgba(26, 30, 37, 0.93);
   display: flex;
   flex-wrap: wrap;
-  height: auto;
-  overflow-y: scroll;
+  height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
-
-
-
 
 .logo-container,
 .button-container {

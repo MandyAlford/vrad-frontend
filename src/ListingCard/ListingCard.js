@@ -6,10 +6,9 @@ import './ListingCard.css';
 const ListingCard = (props) => {
       let navUrl = `${props.listingId}`
   return (
-
-    <div className='listing-card-image'>
-      <h2>{props.name}</h2>
-      <img src={`/images/${props.listingId}_a.jpg`} className='listing-image'/>
+    <div className='listing-card'>
+      <h2 className='listing-card-header'>{props.name}</h2>
+      <img src={`/images/${props.listingId}_b.jpg`} className='main-image'/>
       <NavLink to={navUrl} >
         <button className='listing-button' id={props.listingId}>SEE MORE</button>
       </NavLink>
