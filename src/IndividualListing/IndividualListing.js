@@ -77,7 +77,7 @@ class IndividualListing extends Component {
             <h4 className='listing-details-bold'>FEATURES: </h4>
             <p className='listing-details'>{this.state.features.join(", ")}</p>
           </div>
-          <button className='favorite-button' onClick={this.props.addFavorites} id={this.state.id}>FAVORITE</button>
+          <button className='favorite-button' onClick={this.props.updateFavorites} id={this.state.id}>FAVORITE</button>
         </div>
       </div>
     )

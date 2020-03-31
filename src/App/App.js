@@ -51,7 +51,7 @@ class App extends Component {
     })
   }
 
-  addListingToFavorites = (event) => {
+  updateFavorites = (event) => {
     let favoriteListings = this.state.favorites
     let currentId = event.target.id
 
@@ -127,7 +127,7 @@ class App extends Component {
           favoriteCount={this.getFavoriteCount()}
         />
         <IndividualListing
-          addFavorites={this.addListingToFavorites}
+          updateFavorites={this.updateFavorites}
           />
         </Route>
 
@@ -140,7 +140,7 @@ class App extends Component {
           />
           <Favorites
             favoriteListings={this.state.favorites}
-            addFavorites={this.addListingToFavorites}/>
+            updateFavorites={this.updateFavorites}/>
         </Route>
 
 
