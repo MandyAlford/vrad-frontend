@@ -24,17 +24,20 @@ class IndividualListing extends Component {
     fetch(`http://localhost:3001/api/v1/listings/${listingId}`)
       .then(response => response.json())
       .then(data => listingDetails = data)
-      .then(details => this.setState({
-        name: listingDetails.name,
-        address: `${listingDetails.address.street}, Denver, CO ${listingDetails.address.zip}`,
-        superhost: listingDetails.details.superhost,
-        beds: listingDetails.details.beds,
-        baths: listingDetails.details.baths,
-        costPerNight: listingDetails.details.cost_per_night,
-        features: listingDetails.details.features,
-        area: listingDetails.area,
-        id: listingId
-      }))
+      .then(details => {
+        let hostStatus = listingDetails.details.superhost ? 'Yes' : 'No'
+        this.setState({
+          name: listingDetails.name,
+          address: `${listingDetails.address.street}, Denver, CO ${listingDetails.address.zip}`,
+          superhost: hostStatus,
+          beds: listingDetails.details.beds,
+          baths: listingDetails.details.baths,
+          costPerNight: listingDetails.details.cost_per_night,
+          features: listingDetails.details.features,
+          area: listingDetails.area,
+          id: listingId
+        })
+      })
   }
 
   render (props) {
