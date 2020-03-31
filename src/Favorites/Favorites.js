@@ -42,7 +42,7 @@ class Favorites extends Component {
       {this.state.favorites.map(item => {
       return <FavoriteCard
         details={item}
-        addFavorites={this.addListingToFavorites}
+        addFavorites={this.props.addFavorites}
         />
     })}
 

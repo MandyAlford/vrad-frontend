@@ -57,6 +57,11 @@ class App extends Component {
 
     if(!favoriteListings.includes(currentId)){
       favoriteListings.push(currentId);
+    } else {
+
+      let currentIndex = favoriteListings.indexOf(currentId);
+      favoriteListings.splice(currentIndex, 1);
+      debugger
     }
     this.setState({
       favorites: favoriteListings,
