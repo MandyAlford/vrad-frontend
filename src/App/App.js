@@ -68,6 +68,10 @@ class App extends Component {
     this.props.history.push(`/favorites`)
   }
 
+  getFavoriteCount = () => {
+    return this.state.favorites.length
+  }
+
   render() {
     let headerText = [
       <h2 className='header-description'>WELCOME, {this.state.name.toUpperCase()}!</h2>,
@@ -90,6 +94,7 @@ class App extends Component {
             headerInfo={headerText}
             logoutUser={this.logoutUser}
             displayFavorites={this.routeToFavorites}
+            favoriteCount={this.getFavoriteCount()}
           />
           <Areas
             name={this.state.name}
@@ -104,6 +109,7 @@ class App extends Component {
             headerInfo={listingText}
             logoutUser={this.logoutUser}
             displayFavorites={this.routeToFavorites}
+            favoriteCount={this.getFavoriteCount()}
           />
           <Listings />
         </Route>
@@ -113,6 +119,7 @@ class App extends Component {
           headerInfo={headerText}
           logoutUser={this.logoutUser}
           displayFavorites={this.routeToFavorites}
+          favoriteCount={this.getFavoriteCount()}
         />
         <IndividualListing
           addFavorites={this.addListingToFavorites}
@@ -124,6 +131,7 @@ class App extends Component {
             headerInfo={headerText}
             logoutUser={this.logoutUser}
             displayFavorites={this.routeToFavorites}
+            favoriteCount={this.getFavoriteCount()}
           />
           <Favorites
             favoriteListings={this.state.favorites}
