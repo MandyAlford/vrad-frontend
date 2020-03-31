@@ -35,10 +35,6 @@ class Areas extends Component {
 
   render() {
     const { areas } = this.state;
-    let name = this.props.name;
-    let type = this.props.type;
-
-
 
     return (
       <div className='card-container'>

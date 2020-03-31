@@ -2,4 +2,12 @@ main {
   height: 100vh;
   display: flex;
   flex-flow: row nowrap;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: rgba(26, 30, 37, 0.93);
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  width: 100%;
 }

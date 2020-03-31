@@ -16,8 +16,8 @@ class LoginForm extends Component {
     return (
       <div className='login-screen'>
         <header className='login-header'>
-          <img src= {map} />
-          <h1>VRAD</h1>
+          <img className='logo' src={map} alt='VRAD map logo'/>
+          <h1 className='VRAD-header-text'>VRAD</h1>
         </header>
         <form className='login-form' onSubmit={this.props.loginUser}>
           <p className="error hidden">Please complete all required fields!</p>
