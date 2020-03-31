@@ -1,4 +1,4 @@
-### VRAD
+## VRAD - Denver Travel App
 
 #### CONTRIBUTORS:
 - [Cristina Peña](github.com/CLPena)
