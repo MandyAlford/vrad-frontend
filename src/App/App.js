@@ -6,7 +6,7 @@ import Areas from '../Areas/Areas';
 import Listings from '../Listings/Listings';
 import IndividualListing from '../IndividualListing/IndividualListing';
 import Header from '../Header/Header';
-
+import Favorites from '../Favorites/Favorites';
 
 class App extends Component {
   constructor() {
@@ -16,6 +16,7 @@ class App extends Component {
       email: '',
       type: 'TYPE OF TRAVEL',
       currentArea: '',
+      favorites: []
     }
   }
 
@@ -57,13 +58,43 @@ class App extends Component {
     })
   }
 
+  updateFavorites = (event) => {
+    let favoriteListings = [...this.state.favorites]
+    let currentId = event.target.id
+
+    if(!favoriteListings.includes(currentId)){
+      favoriteListings.push(currentId);
+    } else {
+      favoriteListings = favoriteListings.filter(listing => {
+        return listing !== currentId;
+      })
+    }
+    this.setState({
+      favorites: favoriteListings,
+    })
+  }
+
+  routeToFavorites = (event) => {
+    event.preventDefault();
+    this.props.history.push(`/favorites`)
+  }
+
+  getFavoriteCount = () => {
+    return this.state.favorites.length
+  }
+
   render() {
     let headerText = [
       <h2 className='header-description'>WELCOME, {this.state.name.toUpperCase()}!</h2>,
       <p className='travel-type'>TRAVEL TYPE: {this.state.type.toUpperCase()}</p>
     ]
 
-    let listingText = `${(this.state.currentArea).toUpperCase()} LISTINGS: `
+    let areaText = `${(this.state.currentArea).toUpperCase()} LISTINGS: `
+
+    let listingText = `LISTING:`
+
+    let favoriteText = `FAVORITES:`
+
     return (
       <main>
         <Route path='/' exact>
@@ -78,6 +109,8 @@ class App extends Component {
           <Header
             headerInfo={headerText}
             logoutUser={this.logoutUser}
+            displayFavorites={this.routeToFavorites}
+            favoriteCount={this.getFavoriteCount()}
           />
           <Areas
             name={this.state.name}
@@ -89,19 +122,38 @@ class App extends Component {
 
         <Route path='/areas/:area_id/listings' exact>
           <Header
-            headerInfo={listingText}
+            headerInfo={areaText}
             logoutUser={this.logoutUser}
+            displayFavorites={this.routeToFavorites}
+            favoriteCount={this.getFavoriteCount()}
           />
           <Listings />
         </Route>
 
         <Route path='/areas/:area_id/listings/:listing_id'>
         <Header
-          headerInfo={headerText}
+          headerInfo={listingText}
           logoutUser={this.logoutUser}
+          displayFavorites={this.routeToFavorites}
+          favoriteCount={this.getFavoriteCount()}
         />
-          <IndividualListing />
+        <IndividualListing
+          updateFavorites={this.updateFavorites}
+          />
         </Route>
+
+        <Route path='/favorites'>
+          <Header
+            headerInfo={favoriteText}
+            logoutUser={this.logoutUser}
+            displayFavorites={this.routeToFavorites}
+            favoriteCount={this.getFavoriteCount()}
+          />
+          <Favorites
+            favoriteListings={this.state.favorites}
+            updateFavorites={this.updateFavorites}/>
+        </Route>
+
 
       </main>
     )

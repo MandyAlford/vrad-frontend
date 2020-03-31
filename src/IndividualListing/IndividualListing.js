@@ -24,20 +24,23 @@ class IndividualListing extends Component {
     fetch(`http://localhost:3001/api/v1/listings/${listingId}`)
       .then(response => response.json())
       .then(data => listingDetails = data)
-      .then(details => this.setState({
-        name: listingDetails.name,
-        address: `${listingDetails.address.street}, Denver, CO ${listingDetails.address.zip}`,
-        superhost: listingDetails.details.superhost,
-        beds: listingDetails.details.beds,
-        baths: listingDetails.details.baths,
-        costPerNight: listingDetails.details.cost_per_night,
-        features: listingDetails.details.features,
-        area: listingDetails.area,
-        id: listingId
-      }))
+      .then(details => {
+        let hostStatus = listingDetails.details.superhost ? 'Yes' : 'No'
+        this.setState({
+          name: listingDetails.name,
+          address: `${listingDetails.address.street}, Denver, CO ${listingDetails.address.zip}`,
+          superhost: hostStatus,
+          beds: listingDetails.details.beds,
+          baths: listingDetails.details.baths,
+          costPerNight: listingDetails.details.cost_per_night,
+          features: listingDetails.details.features,
+          area: listingDetails.area,
+          id: listingId
+        })
+      })
   }
 
-  render () {
+  render (props) {
     return (
       <div className='individual-listing-main'>
         <div className='individual-listing-container'>
@@ -74,7 +77,7 @@ class IndividualListing extends Component {
             <h4 className='listing-details-bold'>FEATURES: </h4>
             <p className='listing-details'>{this.state.features.join(", ")}</p>
           </div>
-          <button className='favorite-button'>FAVORITE</button>
+          <button className='favorite-button' onClick={this.props.updateFavorites} id={this.state.id}>FAVORITE</button>
         </div>
       </div>
     )
