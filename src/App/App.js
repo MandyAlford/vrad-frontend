@@ -83,7 +83,11 @@ class App extends Component {
       <p className='travel-type'>TRAVEL TYPE: {this.state.type.toUpperCase()}</p>
     ]
 
-    let listingText = `${(this.state.currentArea).toUpperCase()} LISTINGS: `
+    let areaText = `${(this.state.currentArea).toUpperCase()} LISTINGS: `
+
+    let listingText = `LISTING:`
+
+    let favoriteText = `FAVORITES:`
 
     return (
       <main>
@@ -111,7 +115,7 @@ class App extends Component {
 
         <Route path='/areas/:area_id/listings' exact>
           <Header
-            headerInfo={listingText}
+            headerInfo={areaText}
             logoutUser={this.logoutUser}
             displayFavorites={this.routeToFavorites}
             favoriteCount={this.getFavoriteCount()}
@@ -121,7 +125,7 @@ class App extends Component {
 
         <Route path='/areas/:area_id/listings/:listing_id'>
         <Header
-          headerInfo={headerText}
+          headerInfo={listingText}
           logoutUser={this.logoutUser}
           displayFavorites={this.routeToFavorites}
           favoriteCount={this.getFavoriteCount()}
@@ -133,7 +137,7 @@ class App extends Component {
 
         <Route path='/favorites'>
           <Header
-            headerInfo={headerText}
+            headerInfo={favoriteText}
             logoutUser={this.logoutUser}
             displayFavorites={this.routeToFavorites}
             favoriteCount={this.getFavoriteCount()}
