@@ -28,7 +28,8 @@
   width: 100%;
 }
 
-.login-form {
+.login-form,
+.error-container {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
@@ -89,8 +90,4 @@ button:hover {
   padding: 2%;
   text-align: center;
   width: 70%;
-}
-
-.hidden {
-  visibility: hidden;
 }

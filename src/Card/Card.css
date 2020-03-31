@@ -25,11 +25,11 @@
 
 .area-header-text {
   margin: 0 0 4% 0;
+  display: block;
 }
 
 .area-header-container {
   height: 15%;
-  object-fit: fill;
 }
 
 .area-button {

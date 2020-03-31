@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       name: '',
       email: '',
-      type: '',
+      type: 'TYPE OF TRAVEL',
       currentArea: '',
     }
   }
@@ -25,10 +25,17 @@ class App extends Component {
 
   loginUser = (event) => {
     event.preventDefault();
-    if (this.state.name === '' || this.state.email === '' || this.state.type === '') {
-      document.querySelector('.error').classList.remove('hidden');
+    if (this.state.name === '' || this.state.email === '' || this.state.type === 'TYPE OF TRAVEL') {
+      this.displayError();
     } else {
       this.props.history.push('/areas')
+    }
+  }
+
+  displayError = () => {
+    let errorContainer = document.querySelector('.error-container');
+    if(errorContainer.innerHTML === '') {
+      errorContainer.insertAdjacentHTML('afterbegin', '<p class="error">Please complete all required fields!</p>')
     }
   }
 
@@ -63,6 +70,7 @@ class App extends Component {
           <LoginForm
             change={this.change}
             loginUser={this.loginUser}
+            formData={this.state}
           />
         </Route>
 
