@@ -53,7 +53,7 @@ class Favorites extends Component {
     let favoritesDisplay;
     if(!this.state.favorites.length) {
       favoritesDisplay = (
-        <div className='card-container'>
+        <div className='fav-card-container'>
           <h1 className='error-message'> You have no favorites! </h1>
         </div>)
     } else {

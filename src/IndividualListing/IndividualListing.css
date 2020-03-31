@@ -1,13 +1,13 @@
 .listing-image {
-  width: 33.1%;
   height: auto;
   margin: 0;
+  width: 33.1%;
 }
 
 .favorite-button {
-  width: 150px;
   height: 50px;
   padding: 10px;
+  width: 150px;
 }
 
 .individual-listing-main {
@@ -16,10 +16,10 @@
 }
 
 .individual-listing-container {
-  margin: 2%;
-  padding: 2%;
   background-color: white;
   border-radius: 15px;
+  margin: 2%;
+  padding: 2%;
 }
 
 .listing-details {
@@ -38,14 +38,14 @@
 }
 
 .images-container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .listing-header-container {
-  text-align: center;
   margin-bottom: 1em;
+  text-align: center;
 }
