@@ -24,7 +24,7 @@ describe('App', () => {
     fireEvent.select(getByDisplayValue('TYPE OF TRAVEL'), {target: {value: 'OTHER'}});
     fireEvent.click(getByText('SUBMIT'))
     // fireEvent.submit(getByLabelText('login'));
-    debug();
+    // debug();
 
     // expect(App.loginUser).toHaveBeenCalled();
   });
