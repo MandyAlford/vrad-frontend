@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       name: '',
       email: '',
-      type: '',
+      type: 'TYPE OF TRAVEL',
       currentArea: '',
     }
   }
@@ -25,7 +25,7 @@ class App extends Component {
 
   loginUser = (event) => {
     event.preventDefault();
-    if (this.state.name === '' || this.state.email === '' || this.state.type === '') {
+    if (this.state.name === '' || this.state.email === '' || this.state.type === 'TYPE OF TRAVEL') {
       this.displayError();
     } else {
       this.props.history.push('/areas')
@@ -70,6 +70,7 @@ class App extends Component {
           <LoginForm
             change={this.change}
             loginUser={this.loginUser}
+            formData={this.state}
           />
         </Route>
 
