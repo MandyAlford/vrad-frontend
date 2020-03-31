@@ -22,3 +22,4 @@ We are updating our wireframe as we work, so visiting [our wireframe on Figma](h
 2. Adding icons and styling information display on listing cards
 3. Adding an interactive map feature to view listings in an area
 4. Using localStorage to save favorites for a user
+5. Adding a notification for a listing being added or removed from favorites and button styling to match
