@@ -20,7 +20,7 @@ class LoginForm extends Component {
           <h1 className='VRAD-header-text'>VRAD</h1>
         </header>
         <form className='login-form' onSubmit={this.props.loginUser}>
-          <p className="error hidden">Please complete all required fields!</p>
+          <div className='error-container'></div>
           <input type='text' id='name' placeholder='NAME' onChange={this.handleChange}/>
           <input type='text' id='email' placeholder='EMAIL'onChange={this.handleChange}/>
           <select id='type' onChange={this.handleChange} defaultValue='TYPE OF TRAVEL'>
