@@ -1,0 +1,13 @@
+.favorite-card {
+  background: #FFFFFF;
+  border-radius: 15px;
+  min-height: 300px;
+  padding: 1% 0;
+  text-align: center;
+  width: 35%;
+  margin: 1% 0;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  justify-content: space-between;
+}
