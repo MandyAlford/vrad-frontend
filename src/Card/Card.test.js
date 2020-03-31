@@ -53,5 +53,4 @@ describe('Card', () => {
     expect(mockRoute).toHaveBeenCalled()
   });
 
-
 });
