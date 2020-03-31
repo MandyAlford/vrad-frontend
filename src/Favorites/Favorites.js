@@ -10,9 +10,8 @@ class Favorites extends Component {
   }
 
   componentDidMount() {
-    debugger
     const promises = this.props.favoriteListings.map(item => {
-      fetch(`http://localhost:3001/api/v1/listings/${item}`)
+      return fetch(`http://localhost:3001/api/v1/listings/${item}`)
             .then(res => res.json())
             .then(favoritesDetails => {
               return {
@@ -27,17 +26,16 @@ class Favorites extends Component {
                 id: item
                 }
               })
-              .then(favorites => this.setState({ favorites }))
-    })
 
+    })
+     Promise.all(promises)
+      .then(favorites => this.setState({ favorites }))
   }
 
-  render(props) {
-        return (
-        <div className="favorites-card">
-        <p>I am a favorite</p>
-        </div>
-      )
+  render() {
+    return this.state.favorites.map(item => {
+
+    })
     }
 
 }
