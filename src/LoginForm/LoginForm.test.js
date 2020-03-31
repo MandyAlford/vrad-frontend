@@ -30,17 +30,16 @@ describe('LoginForm', () => {
     expect(mockLogin).toHaveBeenCalledTimes(1);
   });
 
-  // it('We should not be able to login when form is incomplete', () => {
-  //   let mockLogin = jest.fn();
-  //   let mockChange = jest.fn();
-  //
-  //   const { getByPlaceholderText, getByText } = render(<Router> <LoginForm change={mockChange} loginUser={mockLogin}/> </Router>);
-  //
-  //   let errorMessage = getByText('Please complete all required fields!')
-  //   fireEvent.click(getByText('SUBMIT'));
-  //
-  //   expect(errorMessage).toBeInTheDocument();
-  // });
-  //I can't get this test to fail, so we need to change this somehow to check that the error message is visible
+  it('We should not be able to login when form is incomplete', () => {
+    let mockLogin = jest.fn();
+
+    const { getByPlaceholderText, getByText } = render(<Router> <App loginUser={mockLogin}/> </Router>);
+
+    fireEvent.click(getByText('SUBMIT'));
+    let errorMessage = getByText('Please complete all required fields!')
+
+    expect(errorMessage).toBeInTheDocument();
+  });
+
 
 });
