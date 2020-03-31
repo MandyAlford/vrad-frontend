@@ -1,13 +1,13 @@
 main {
-  height: 100vh;
+  background: rgba(26, 30, 37, 0.93);
+  box-sizing: border-box;
+  display: flex;
   display: flex;
   flex-flow: row nowrap;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background: rgba(26, 30, 37, 0.93);
-  display: flex;
   flex-wrap: wrap;
+  height: 100vh;
+  margin: 0;
   overflow-y: scroll;
+  padding: 0;
   width: 100%;
 }

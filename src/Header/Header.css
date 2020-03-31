@@ -17,18 +17,18 @@
 }
 
 .travel-type {
+  font-size: .75em;
   margin: 3px;
   text-align: center;
   width: 100%;
-  font-size: .75em;
 }
 
 .header-text-container {
   display: flex;
   flex-flow: column nowrap;
   padding: 0;
-  width: 30%;
   text-align: center;
+  width: 30%;
 }
 
 .header-buttons {

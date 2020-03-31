@@ -1,0 +1,13 @@
+.error-message {
+  color: white;
+  padding: 2%;
+  text-align: center;
+  width: 100%;
+}
+
+.fav-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+}
