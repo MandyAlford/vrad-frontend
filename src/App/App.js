@@ -125,7 +125,9 @@ class App extends Component {
             logoutUser={this.logoutUser}
             displayFavorites={this.routeToFavorites}
           />
-          <Favorites favoriteListings={this.state.favorites}/>
+          <Favorites
+            favoriteListings={this.state.favorites}
+            addFavorites={this.addListingToFavorites}/>
         </Route>
 
 
