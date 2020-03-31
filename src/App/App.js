@@ -6,7 +6,7 @@ import Areas from '../Areas/Areas';
 import Listings from '../Listings/Listings';
 import IndividualListing from '../IndividualListing/IndividualListing';
 import Header from '../Header/Header';
-
+import Favorites from '../Favorites/Favorites';
 
 class App extends Component {
   constructor() {
@@ -61,7 +61,11 @@ class App extends Component {
     this.setState({
       favorites: favoriteListings,
     })
-    debugger
+  }
+
+  routeToFavorites = (event) => {
+    event.preventDefault();
+    this.props.history.push(`/favorites`)
   }
 
   render() {
@@ -85,6 +89,7 @@ class App extends Component {
           <Header
             headerInfo={headerText}
             logoutUser={this.logoutUser}
+            displayFavorites={this.routeToFavorites}
           />
           <Areas
             name={this.state.name}
@@ -98,6 +103,7 @@ class App extends Component {
           <Header
             headerInfo={listingText}
             logoutUser={this.logoutUser}
+            displayFavorites={this.routeToFavorites}
           />
           <Listings />
         </Route>
@@ -106,11 +112,22 @@ class App extends Component {
         <Header
           headerInfo={headerText}
           logoutUser={this.logoutUser}
+          displayFavorites={this.routeToFavorites}
         />
         <IndividualListing
           addFavorites={this.addListingToFavorites}
           />
         </Route>
+
+        <Route path='/favorites'>
+          <Header
+            headerInfo={headerText}
+            logoutUser={this.logoutUser}
+            displayFavorites={this.routeToFavorites}
+          />
+          <Favorites favoriteListings={this.state.favorites}/>
+        </Route>
+
 
       </main>
     )
