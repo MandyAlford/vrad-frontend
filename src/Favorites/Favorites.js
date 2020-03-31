@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import FavoriteCard from '../FavoriteCard/FavoriteCard';
-import { fetchListing } from '../util/ApiCalls'
+import { fetchListing } from '../util/ApiCalls';
 import './Favorites.css';
 
 class Favorites extends Component {
