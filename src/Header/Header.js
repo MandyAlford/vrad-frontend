@@ -21,7 +21,7 @@ class Header extends Component {
             {this.props.headerInfo}
           </div>
           <form className='button-container'>
-            <button className='header-buttons' id='favorite-button'>FAVORITES</button>
+            <button className='header-buttons' id='favorite-button' onClick={this.props.displayFavorites}>FAVORITES</button>
             <button className='header-buttons' id='log-off-button' onClick={this.props.logoutUser}>LOG OFF</button>
           </form>
         </header>

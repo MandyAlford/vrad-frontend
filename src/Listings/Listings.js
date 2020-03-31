@@ -17,6 +17,7 @@ class Listings extends Component {
     .then(response => response.json())
     .then(data => {
       const promises = data.listings.map(listing => {
+      
         return fetch(`http://localhost:3001${listing}`)
           .then(res => res.json())
           .then(listingDetails => {
