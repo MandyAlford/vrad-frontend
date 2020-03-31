@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
+import FavoriteCard from '../FavoriteCard/FavoriteCard';
 
 class Favorites extends Component {
   constructor() {
@@ -33,11 +34,19 @@ class Favorites extends Component {
   }
 
   render() {
-    return this.state.favorites.map(item => {
+    return (
+      <div className='card-container'>
 
-    })
-    }
+      {this.state.favorites.map(item => {
+      return <FavoriteCard
+        details={item}
+        addFavorites={this.addListingToFavorites}
+        />
+    })}
 
+    </div>
+    )
+  }
 }
 
 export default withRouter(Favorites);
