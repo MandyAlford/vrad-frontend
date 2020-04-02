@@ -49,3 +49,8 @@
   margin-bottom: 1em;
   text-align: center;
 }
+
+.favorites-message {
+  color: rgba(228, 74, 26);
+  background: #FFFFFF;
+}
