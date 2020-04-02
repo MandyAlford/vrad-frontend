@@ -20,7 +20,7 @@ A main learning goal of this project was learning React, including testing with 
 * Clone this repo
 * Clone the backend API repo [https://github.com/MandyAlford/VRAD]
 * From your terminal, open each of the above repos.
-* Enter <npm start> in your command line for each repo.
+* Enter `npm start` in your command line for each repo.
 * The App should load in your browser.  
   
 
