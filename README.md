@@ -7,6 +7,9 @@
 #### GIF OF APP:
 ![GIF](https://i.imgur.com/Hz1d0Ch.gif)
 
+
+[Link to Video](https://www.youtube.com/watch?v=7QbIl6g2z3Y&feature=youtu.be)
+
 #### ABSTRACT:
 This is a paired project from Mod 3 at Turing School of Software and Design. We were given a spec detailing a travel app that can be used by logging in with a name, email, and travel type. On login, the app reroutes to a user dashboard that greets the user by name and displays the areas available for booking. If the user clicks on an area, they are redirected to a page that fetches the listings from an API and displays them all with an image. If an individual listing is clicked on, the user is routed to a page displaying more information about that listing. The user can add and remove listings from their favorites, which they can view by selecting the favorites button in the header,
 
