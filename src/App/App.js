@@ -62,8 +62,6 @@ class App extends Component {
     let favoriteListings = [...this.state.favorites];
     let currentId = event.target.id;
 
-    this.toggleFavoriteMessage(currentId);
-
     if(!favoriteListings.includes(currentId)){
       favoriteListings.push(currentId);
       document.getElementById(currentId).classList.add('favorited')
@@ -76,12 +74,18 @@ class App extends Component {
     this.setState({
       favorites: favoriteListings,
     })
+
+    this.toggleFavoriteMessage(currentId);
   }
 
   toggleFavoriteMessage = (currentId) => {
     let message = document.querySelector('.favorites-message');
-    if(message){
-      message.classList.toggle('hidden')
+    let button = document.getElementById(currentId);
+
+    if(message && button.classList.contains('favorited')){
+      message.classList.remove('hidden')
+    } else if (message) {
+      message.classList.add('hidden')
     }
   }
 
