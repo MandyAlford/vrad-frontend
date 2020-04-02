@@ -59,12 +59,14 @@ class App extends Component {
   }
 
   updateFavorites = (event) => {
-    let favoriteListings = [...this.state.favorites]
-    let currentId = event.target.id
+    let favoriteListings = [...this.state.favorites];
+    let currentId = event.target.id;
 
     if(!favoriteListings.includes(currentId)){
       favoriteListings.push(currentId);
+      document.getElementById(currentId).classList.add('favorited')
     } else {
+      document.getElementById(currentId).classList.remove('favorited')
       favoriteListings = favoriteListings.filter(listing => {
         return listing !== currentId;
       })
@@ -72,6 +74,19 @@ class App extends Component {
     this.setState({
       favorites: favoriteListings,
     })
+
+    this.toggleFavoriteMessage(currentId);
+  }
+
+  toggleFavoriteMessage = (currentId) => {
+    let message = document.querySelector('.favorites-message');
+    let button = document.getElementById(currentId);
+
+    if(message && button.classList.contains('favorited')){
+      message.classList.remove('hidden')
+    } else if (message) {
+      message.classList.add('hidden')
+    }
   }
 
   routeToFavorites = (event) => {
@@ -85,7 +100,7 @@ class App extends Component {
 
   render() {
     let headerText = [
-      <h2 className='header-description'>WELCOME, {this.state.name.toUpperCase()}!</h2>,
+      <h3 className='header-description'>WELCOME, {this.state.name.toUpperCase()}!</h3>,
       <p className='travel-type'>TRAVEL TYPE: {this.state.type.toUpperCase()}</p>
     ]
 
@@ -139,6 +154,8 @@ class App extends Component {
         />
         <IndividualListing
           updateFavorites={this.updateFavorites}
+          favorites={this.state.favorites}
+          toggleFavoriteMessage={this.toggleFavoriteMessage}
           />
         </Route>
 

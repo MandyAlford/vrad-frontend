@@ -38,6 +38,14 @@ class IndividualListing extends Component {
           id: listingId
         })
       })
+      .then(information => this.checkIfFavorite(listingId))
+  }
+
+  checkIfFavorite = (listingId) => {
+    if(this.props.favorites.includes(listingId)) {
+      document.getElementById(listingId).classList.add('favorited')
+      this.props.toggleFavoriteMessage(listingId)
+    }
   }
 
   render (props) {
@@ -78,6 +86,7 @@ class IndividualListing extends Component {
             <p className='listing-details'>{this.state.features.join(", ")}</p>
           </div>
           <button className='favorite-button' onClick={this.props.updateFavorites} id={this.state.id}>FAVORITE</button>
+          <p className='favorites-message hidden'> Added to your favorites! </p>
         </div>
       </div>
     )
