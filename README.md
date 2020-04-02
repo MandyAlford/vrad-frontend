@@ -15,7 +15,7 @@ This is a paired project from Mod 3 at Turing School of Software and Design. We 
 
 A main learning goal of this project was learning React, including testing with Jest, asynchronous functions/testing, and data handling. 
 
-#### SETUP INSTRUCTIONS
+#### SETUP INSTRUCTIONS:
 
 * Clone this repo
 * Clone the backend API repo [https://github.com/MandyAlford/VRAD]
