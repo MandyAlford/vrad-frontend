@@ -15,6 +15,14 @@ This is a paired project from Mod 3 at Turing School of Software and Design. We 
 
 A main learning goal of this project was learning React, including testing with Jest, asynchronous functions/testing, and data handling. 
 
+#### SETUP INSTRUCTIONS
+
+* Clone this repo
+* Clone the backend API repo [https://github.com/MandyAlford/VRAD]
+* From your terminal, open each of the above repos.
+* Enter <npm start> in your command line for each repo.
+  
+
 #### WIREFRAME:
 We are updating our wireframe as we work, so visiting [our wireframe on Figma](https://www.figma.com/file/RArYIkKpWCdANKnyw6LiXn/VRAD-Wireframe?node-id=9%3A13) is the best way to see the most up-to-date version. The screenshots below represent the ultimate goal for our app. Certain pages, like the listings page, don't currently match the wireframe. We wanted the wireframe to represent the best UI/UX possible. As our skills improve, we will continue to update the app in an effort to reach this goal.
 
