@@ -154,6 +154,8 @@ class App extends Component {
         />
         <IndividualListing
           updateFavorites={this.updateFavorites}
+          favorites={this.state.favorites}
+          toggleFavoriteMessage={this.toggleFavoriteMessage}
           />
         </Route>
 

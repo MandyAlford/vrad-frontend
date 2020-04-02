@@ -38,6 +38,14 @@ class IndividualListing extends Component {
           id: listingId
         })
       })
+      .then(information => this.checkIfFavorite(listingId))
+  }
+
+  checkIfFavorite = (listingId) => {
+    if(this.props.favorites.includes(listingId)) {
+      document.getElementById(listingId).classList.add('favorited')
+      this.props.toggleFavoriteMessage(listingId)
+    }
   }
 
   render (props) {
